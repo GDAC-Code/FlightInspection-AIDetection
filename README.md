@@ -1,9 +1,5 @@
 # 基于YOLO的飞机表面缺陷检测系统
 
-## 项目介绍
-可参考                
-[【YOLO 系列】基于YOLO的飞机表面缺陷智能检测系统【python源码+Pyqt5界面+数据集+训练代码】](https://mp.weixin.qq.com/s/GQ-YviLAiPObbHDb6FmpOA)	
-
 ## 项目目录
 ```
 | --
@@ -51,9 +47,6 @@ python detect.py
 ```
 python GUI.py
 ```
-
-# 联系作者
-WX公众号：@AI算法与电子竞赛
 
 ## 项目相关问题
 问题：运行GUI.py，且填写相关内容从后，依然推理失败    
