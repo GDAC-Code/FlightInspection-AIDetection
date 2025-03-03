@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<annotation><folder>images</folder><filename>82_9.png</filename><path>images/82_9.png</path><source><database>Unknown</database></source><size><width>6000</width><height>4000</height><depth>3</depth></size><object><name>Cracks</name><pose>Unspecified</pose><truncated>0</truncated><difficult>0</difficult><bndbox><xmin>3292</xmin><ymin>2585</ymin><xmax>3506</xmax><ymax>2709</ymax></bndbox></object></annotation>

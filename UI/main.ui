@@ -24,14 +24,14 @@
   </property>
   <property name="font">
    <font>
-    <family>仿宋</family>
+    <family>Maple Mono CN</family>
    </font>
   </property>
   <property name="contextMenuPolicy">
    <enum>Qt::DefaultContextMenu</enum>
   </property>
   <property name="windowTitle">
-   <string>基于YOLO的飞机表面缺陷检测系统</string>
+   <string>YOLO飞机检测</string>
   </property>
   <property name="windowIcon">
    <iconset>
@@ -55,7 +55,7 @@
   <widget class="QWidget" name="centralwidget">
    <property name="font">
     <font>
-     <family>黑体</family>
+     <family>Maple Mono CN</family>
     </font>
    </property>
    <widget class="QLabel" name="label_2">
@@ -81,7 +81,7 @@
     </property>
     <property name="font">
      <font>
-      <family>微软雅黑</family>
+      <family>Maple Mono CN</family>
       <pointsize>30</pointsize>
       <weight>75</weight>
       <italic>false</italic>
@@ -92,7 +92,7 @@
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>飞机表面缺陷检测系统</string>
+     <string>检测</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -109,7 +109,7 @@
     </property>
     <property name="font">
      <font>
-      <family>黑体</family>
+      <family>Maple Mono Cn</family>
       <pointsize>9</pointsize>
      </font>
     </property>
@@ -198,7 +198,7 @@ border-radius: 15px;
     </property>
     <property name="font">
      <font>
-      <family>黑体</family>
+      <family>Maple Mono Cn</family>
       <pointsize>13</pointsize>
      </font>
     </property>
@@ -220,7 +220,7 @@ border-radius: 15px;
     </property>
     <property name="font">
      <font>
-      <family>黑体</family>
+      <family>Maple Mono Cn</family>
       <pointsize>13</pointsize>
      </font>
     </property>
@@ -242,7 +242,7 @@ border-radius: 15px;
     </property>
     <property name="font">
      <font>
-      <family>黑体</family>
+      <family>Maple Mono Cn</family>
       <pointsize>13</pointsize>
      </font>
     </property>
@@ -264,7 +264,7 @@ border-radius: 15px;
     </property>
     <property name="font">
      <font>
-      <family>黑体</family>
+      <family>Maple Mono Cn</family>
       <pointsize>13</pointsize>
      </font>
     </property>
@@ -286,7 +286,7 @@ border-radius: 15px;
     </property>
     <property name="font">
      <font>
-      <family>黑体</family>
+      <family>Maple Mono Cn</family>
       <pointsize>13</pointsize>
      </font>
     </property>
@@ -346,7 +346,7 @@ border-radius: 15px;
     </property>
     <property name="font">
      <font>
-      <family>黑体</family>
+      <family>Maple Mono Cn</family>
       <pointsize>9</pointsize>
      </font>
     </property>
@@ -371,7 +371,7 @@ border-radius: 15px;
     </property>
     <property name="font">
      <font>
-      <family>黑体</family>
+      <family>Maple Mono Cn</family>
       <pointsize>2</pointsize>
      </font>
     </property>
@@ -443,7 +443,7 @@ padding-left: 10px;
     </property>
     <property name="font">
      <font>
-      <family>黑体</family>
+      <family>Maple Mono Cn</family>
       <pointsize>11</pointsize>
       <weight>75</weight>
       <bold>true</bold>
@@ -479,7 +479,7 @@ QPushButton:hover {
     </property>
     <property name="font">
      <font>
-      <family>黑体</family>
+      <family>Maple Mono Cn</family>
       <pointsize>13</pointsize>
      </font>
     </property>
@@ -501,7 +501,7 @@ QPushButton:hover {
     </property>
     <property name="font">
      <font>
-      <family>黑体</family>
+      <family>Maple Mono Cn</family>
       <pointsize>13</pointsize>
      </font>
     </property>
@@ -523,7 +523,7 @@ QPushButton:hover {
     </property>
     <property name="font">
      <font>
-      <family>黑体</family>
+      <family>Maple Mono Cn</family>
       <pointsize>13</pointsize>
      </font>
     </property>
@@ -545,7 +545,7 @@ QPushButton:hover {
     </property>
     <property name="font">
      <font>
-      <family>黑体</family>
+      <family>Maple Mono Cn</family>
       <pointsize>13</pointsize>
      </font>
     </property>
@@ -567,7 +567,7 @@ QPushButton:hover {
     </property>
     <property name="font">
      <font>
-      <family>黑体</family>
+      <family>Maple Mono Cn</family>
       <pointsize>13</pointsize>
      </font>
     </property>
@@ -600,7 +600,7 @@ QLabel {
     </property>
     <property name="font">
      <font>
-      <family>黑体</family>
+      <family>Maple Mono Cn</family>
       <pointsize>11</pointsize>
       <weight>50</weight>
       <bold>false</bold>
@@ -702,7 +702,7 @@ QPushButton:hover {
     </property>
     <property name="font">
      <font>
-      <family>黑体</family>
+      <family>Maple Mono Cn</family>
       <pointsize>11</pointsize>
       <weight>50</weight>
       <bold>false</bold>
@@ -769,7 +769,7 @@ QPushButton:hover {
     </property>
     <property name="font">
      <font>
-      <family>黑体</family>
+      <family>Maple Mono Cn</family>
       <pointsize>11</pointsize>
       <weight>50</weight>
       <bold>false</bold>
@@ -803,7 +803,7 @@ padding-left: 10px;
     </property>
     <property name="font">
      <font>
-      <family>黑体</family>
+      <family>Maple Mono Cn</family>
       <pointsize>11</pointsize>
       <weight>75</weight>
       <bold>true</bold>
@@ -861,7 +861,7 @@ QPushButton:hover {
     </property>
     <property name="font">
      <font>
-      <family>黑体</family>
+      <family>Maple Mono Cn</family>
       <pointsize>13</pointsize>
      </font>
     </property>
@@ -886,7 +886,7 @@ QPushButton:hover {
     </property>
     <property name="font">
      <font>
-      <family>黑体</family>
+      <family>Maple Mono Cn</family>
       <pointsize>13</pointsize>
      </font>
     </property>
@@ -1269,7 +1269,7 @@ QLabel {
     </property>
     <property name="font">
      <font>
-      <family>黑体</family>
+      <family>Maple Mono Cn</family>
       <pointsize>13</pointsize>
      </font>
     </property>
@@ -1360,7 +1360,7 @@ QPushButton:hover {
     </property>
     <property name="font">
      <font>
-      <family>黑体</family>
+      <family>Maple Mono Cn</family>
       <pointsize>-1</pointsize>
       <weight>50</weight>
       <bold>false</bold>
@@ -1395,7 +1395,7 @@ padding-left: 10px;
     </property>
     <property name="font">
      <font>
-      <family>黑体</family>
+      <family>Maple Mono Cn</family>
       <pointsize>-1</pointsize>
       <weight>50</weight>
       <bold>false</bold>
@@ -1430,7 +1430,7 @@ padding-left: 10px;
     </property>
     <property name="font">
      <font>
-      <family>黑体</family>
+      <family>Maple Mono Cn</family>
      </font>
     </property>
     <property name="styleSheet">
@@ -1611,7 +1611,7 @@ padding-left: 10px;
     </property>
     <property name="font">
      <font>
-      <family>黑体</family>
+      <family>Maple Mono Cn</family>
       <pointsize>13</pointsize>
      </font>
     </property>
@@ -1710,7 +1710,7 @@ QPushButton:hover {
     </property>
     <property name="font">
      <font>
-      <family>黑体</family>
+      <family>Maple Mono Cn</family>
       <pointsize>11</pointsize>
       <weight>75</weight>
       <bold>true</bold>

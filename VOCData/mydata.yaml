@@ -1,5 +1,5 @@
-train: F:\YOLO\Detection\21 AircraftSurfaceDefect Detection\21 AircraftSurfaceDefect Detection\VOCData\ImageSets\train.txt
-val: F:\YOLO\Detection\21 AircraftSurfaceDefect Detection\21 AircraftSurfaceDefect Detection\VOCData\ImageSets\val.txt
+train: E:\FlightInspection-AIDetection\VOCData\ImageSets\train.txt
+val: E:\FlightInspection-AIDetection\VOCData\ImageSets\val.txt
 
 # number of classes
 nc: 5
