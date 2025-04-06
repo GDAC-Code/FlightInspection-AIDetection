@@ -1,0 +1,986 @@
+/* 全局样式 */
+body {
+    font-family: 'Microsoft YaHei', Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    padding-bottom: 2rem;
+}
+
+.report-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.report-header {
+    position: relative;
+    padding: 2rem 0;
+    background: #ffffff;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.report-title {
+    color: #2c3e50;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+/* 卡片样式 */
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(240, 240, 240, 0.8);
+}
+
+.card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.card-header {
+    border-bottom: none;
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* 航司选择器样式 */
+.airline-selector {
+    transition: all 0.3s ease;
+    background-color: rgba(52, 152, 219, 0.05);
+    border-radius: 8px !important;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.airline-selector:hover {
+    background-color: rgba(52, 152, 219, 0.1);
+    border-color: #3498db !important;
+    transform: scale(1.02);
+}
+
+.airline-selector i {
+    color: #3498db;
+    transition: all 0.3s ease;
+}
+
+.airline-selector:hover i {
+    transform: rotate(15deg);
+}
+
+.airline-select {
+    width: 100%;
+    border-radius: 6px;
+    padding: 0.5rem;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    background: rgba(249, 250, 251, 0.8);
+    cursor: pointer;
+}
+
+.airline-select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+    outline: none;
+}
+
+/* 表单样式 */
+.form-label {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    background: rgba(249, 250, 251, 0.8);
+}
+
+/* 输入框图标颜色 */
+.input-group-text i,
+.input-group-text .fas,
+.input-group-text .far,
+.input-group-text .fa {
+    color: #3498db;
+}
+
+/* 标签页样式 */
+.nav-tabs {
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.nav-tabs .nav-link {
+    color: #6c757d;
+    font-weight: 600;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-tabs .nav-link:hover {
+    color: #3498db;
+    background-color: rgba(52, 152, 219, 0.05);
+}
+
+.nav-tabs .nav-link.active {
+    color: #3498db;
+    background-color: transparent;
+    border: none;
+}
+
+.nav-tabs .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #3498db;
+    border-radius: 3px 3px 0 0;
+}
+
+/* 标签页内容过渡效果 */
+.tab-pane {
+    transition: opacity 0.3s ease;
+}
+
+.tab-pane.fade {
+    opacity: 0;
+}
+
+.tab-pane.fade.show {
+    opacity: 1;
+}
+
+.form-control.editable {
+    background-color: #f8f9fa;
+}
+
+.form-control.editable:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+    background-color: #fff;
+}
+
+.form-control.editable::placeholder {
+    color: #adb5bd;
+    font-style: italic;
+}
+
+body.dark .form-control.editable {
+    background-color: #2a2a3c;
+    color: #fbfbfb;
+}
+
+body.dark .form-control.editable:focus {
+    background-color: #2a2a3c;
+    border-color: #3498db;
+    color: #fbfbfb;
+}
+
+body.dark .form-control.editable::placeholder {
+    color: #6c757d;
+}
+
+/* 表格样式 */
+.table {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(240, 240, 255, 0.6);
+}
+
+.table-primary {
+    background-color: #f8f9fa;
+    color: #2c3e50;
+}
+
+.table th {
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.3px;
+    border: none;
+    padding: 0.75rem;
+    vertical-align: middle;
+}
+
+.table td {
+    padding: 0.75rem;
+    vertical-align: middle;
+    border-color: #f0f0f0;
+    transition: background-color 0.2s ease;
+}
+
+.table tbody tr:hover td {
+    background-color: rgba(52, 152, 219, 0.03);
+    transform: translateX(4px);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 图片样式 */
+.report-image {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .report-image {
+    background-color: #1a1a2e;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid #2a2a3c;
+}
+
+body.dark .report-image:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+    filter: brightness(1.1);
+}
+
+.report-image:hover {
+    transform: scale(1.03) perspective(1000px) rotateY(2deg);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+    filter: brightness(1.02);
+}
+
+/* 图片容器和覆盖层样式 */
+.position-relative.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 8px;
+}
+
+.image-overlay i {
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+.image-container:hover .image-overlay {
+    opacity: 1;
+}
+
+body.dark .image-container .image-overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0.7;
+    display: flex;
+    visibility: visible;
+}
+
+body.dark .image-container:hover .image-overlay {
+    opacity: 1;
+}
+
+/* 按钮样式增强 */
+.btn {
+    border-radius: 8px;
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: -2;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover::before {
+    width: 100%;
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+    background-color: #3498db;
+    border: none;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+
+.btn-success {
+    background-color: #2ecc71;
+    border: none;
+}
+
+/* 模态框样式 */
+.modal-content {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+body.dark .modal-content {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #1a1a2e;
+}
+
+body.dark .modal-header {
+    border-bottom: none;
+    background: #2a2a3c;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.btn-close-white {
+    filter: brightness(0) invert(1);
+}
+
+/* 响应式设计 */
+@media (max-width: 992px) {
+    .report-container {
+        margin: 1rem;
+    }
+    
+    .card-body {
+        padding: 1.25rem;
+    }
+}
+
+/* 侧边栏样式 - 从src整合 */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100%;
+    background: #ffffff;
+    z-index: 2000;
+    transition: .3s ease;
+    overflow-x: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+#sidebar.hide {
+    width: 60px;
+}
+
+#sidebar .brand {
+    font-size: 20px;
+    font-weight: 700;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    color: #3498db;
+    padding: 0 16px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    z-index: 500;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+#sidebar .brand i {
+    min-width: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+#sidebar .side-menu {
+    width: 100%;
+    margin-top: 30px;
+}
+
+#sidebar .side-menu li {
+    height: 48px;
+    background: transparent;
+    margin-left: 6px;
+    border-radius: 48px 0 0 48px;
+    padding: 4px;
+    margin-bottom: 5px;
+}
+
+#sidebar .side-menu li.active {
+    background: #f0f0f0;
+    position: relative;
+}
+
+#sidebar .side-menu li a {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    border-radius: 48px;
+    font-size: 16px;
+    color: #2c3e50;
+    white-space: nowrap;
+    overflow-x: hidden;
+    transition: all 0.3s ease;
+}
+
+#sidebar .side-menu li a:hover {
+    color: #3498db;
+}
+
+#sidebar .side-menu li.active a {
+    color: #3498db;
+}
+
+#sidebar .side-menu li a i {
+    min-width: 50px;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+}
+
+#content {
+    position: relative;
+    width: calc(100% - 220px);
+    left: 220px;
+    transition: .3s ease;
+}
+
+#sidebar.hide ~ #content {
+    width: calc(100% - 60px);
+    left: 60px;
+}
+
+@media (max-width: 768px) {
+    .report-title {
+        font-size: 1.75rem;
+    }
+    
+    .table th, .table td {
+        padding: 0.75rem;
+    }
+    
+    .btn {
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .report-container {
+        margin: 0.5rem;
+        border-radius: 8px;
+    }
+    
+    .report-header {
+        padding: 1.5rem 0;
+    }
+    
+    .report-title {
+        font-size: 1.5rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .form-label {
+        font-size: 0.9rem;
+    }
+    
+    .table th, .table td {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* 导航栏样式 - 从src整合 */
+#content nav {
+    height: 56px;
+    background: #ffffff;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 1px 0 #f0f0f0;
+    justify-content: space-between;
+}
+
+#content nav .nav-link {
+    font-size: 16px;
+    color: #2c3e50;
+    transition: all 0.3s ease;
+}
+
+#content nav .nav-link:hover {
+    color: #3498db;
+}
+
+#content nav .form-input {
+    display: flex;
+    align-items: center;
+    height: 36px;
+}
+
+#content nav .form-input input {
+    border-radius: 36px 0 0 36px;
+    background: #f0f0f0;
+    border: none;
+    outline: none;
+    padding: 0 16px;
+    height: 100%;
+    width: 100%;
+    max-width: 320px;
+}
+
+#content nav .form-input button {
+    border-radius: 0 36px 36px 0;
+    background: #3498db;
+    border: none;
+    outline: none;
+    height: 100%;
+    padding: 0 16px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#content nav .form-input button:hover {
+    background: #2980b9;
+}
+
+/* 暗黑模式切换 */
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.swith-lm {
+    width: 60px;
+    height: 30px;
+    background-color: #f0f0f0;
+    display: flex;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    transform: scale(0.8);
+    cursor: pointer;
+}
+
+.ball {
+    width: 22px;
+    height: 22px;
+    background-color: white;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.checkbox:checked + .swith-lm .ball {
+    transform: translateX(30px);
+}
+
+.bx-moon {
+    color: #2c3e50;
+}
+
+.bx-sun {
+    color: #f39c12;
+}
+
+/* 暗黑模式样式 */
+body.dark {
+    background: #0c0c1e;
+    color: #fbfbfb;
+}
+
+body.dark .report-container,
+body.dark .card,
+body.dark #sidebar,
+body.dark #content nav,
+body.dark .notification-menu,
+body.dark .profile-menu,
+body.dark .bg-light,
+body.dark .bg-white,
+body.dark .container-fluid,
+body.dark #content,
+body.dark .report-header,
+body.dark .modal-content,
+body.dark .modal-body,
+body.dark .position-relative.image-container {
+    background: #1a1a2e !important;
+    color: #fbfbfb;
+}
+
+body.dark .image-overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+body.dark .card-header,
+body.dark .report-header {
+    border-color: #2a2a3c;
+}
+
+body.dark .form-control,
+body.dark .airline-select,
+body.dark .form-select,
+body.dark select,
+body.dark option {
+    background: #2a2a3c;
+    border-color: #3a3a4c;
+    color: #fbfbfb;
+}
+
+body.dark .form-control:focus,
+body.dark .form-control.editable:focus,
+body.dark .airline-select:focus {
+    background: #2a2a3c;
+    border-color: #3498db;
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+    color: #fbfbfb;
+}
+
+body.dark .input-group-text {
+    background-color: #2a2a3c;
+    border-color: #3a3a4c;
+    color: #fbfbfb;
+}
+
+body.dark .table {
+    color: #fbfbfb;
+    border-color: #2a2a3c;
+}
+
+body.dark .table th {
+    background-color: #2a2a3c;
+    color: #fbfbfb;
+}
+
+body.dark .table td {
+    border-color: #2a2a3c;
+}
+
+body.dark .nav-tabs {
+    border-color: #2a2a3c;
+}
+
+body.dark .nav-tabs .nav-link {
+    color: #aaaaaa;
+}
+
+body.dark .nav-tabs .nav-link.active {
+    color: #3498db;
+    background-color: transparent;
+}
+
+body.dark .btn-close {
+    filter: invert(1);
+}
+
+body.dark .bx-moon {
+    color: #fbfbfb;
+}
+
+body.dark .bx-sun {
+    color: #f39c12;
+}
+
+body.dark .airline-selector {
+    background: #2a2a3c;
+    border-color: #3a3a4c;
+}
+
+body.dark #content nav .form-input input {
+    background: #2a2a3c;
+    color: #fbfbfb;
+}
+
+body.dark #content nav .form-input button {
+    background: #3498db;
+}
+
+body.dark #sidebar .brand,
+body.dark #sidebar .side-menu li a {
+    background: #1a1a2e;
+    color: #fbfbfb;
+}
+
+body.dark #sidebar .brand i,
+body.dark #sidebar .side-menu li a i,
+body.dark #content nav i:not(.bx-sun),
+body.dark .card-body i,
+body.dark .fas,
+body.dark .far,
+body.dark .fa,
+body.dark .bx:not(.bx-sun),
+body.dark .input-group-text i,
+body.dark .input-group-text .fas,
+body.dark .input-group-text .far,
+body.dark .input-group-text .fa,
+body.dark .form-input i,
+body.dark .input-group i,
+body.dark .input-group .fas,
+body.dark .input-group .far,
+body.dark .input-group .fa,
+body.dark .form-input button i,
+body.dark .input-group > .input-group-text > i,
+body.dark .input-group > .input-group-text > .fas,
+body.dark .input-group > .input-group-text > .far,
+body.dark .input-group > .input-group-text > .fa,
+body.dark .image-overlay i,
+body.dark .modal-header i,
+body.dark .modal-body i,
+body.dark .image-container i,
+body.dark .table i,
+body.dark .position-relative i {
+    color: #fbfbfb !important;
+}
+
+body.dark #sidebar .side-menu li.active {
+    background: #2a2a3c;
+}
+
+body.dark #sidebar .side-menu li.active a {
+    color: #3498db;
+}
+
+/* 通知和个人资料菜单 */
+.notification, .profile {
+    position: relative;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.notification i, .profile img {
+    font-size: 20px;
+    color: #2c3e50;
+    transition: all 0.3s ease;
+}
+
+body.dark .notification i {
+    color: #fbfbfb;
+}
+
+.notification:hover i, .profile:hover img {
+    transform: scale(1.1);
+}
+
+.notification .num {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    background: #f44336;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 右侧菜单容器 */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-left: auto;
+}
+
+.notification-menu, .profile-menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: #fff;
+    width: 200px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 10px 0;
+    display: none;
+    z-index: 1001;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+body.dark .notification-menu, body.dark .profile-menu {
+    background: #1a1a2e;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.notification-menu.show, .profile-menu.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.notification-menu ul, .profile-menu ul {
+    padding: 0;
+    margin: 0;
+}
+
+.notification-menu li, .profile-menu li {
+    padding: 10px 15px;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+body.dark .notification-menu li, body.dark .profile-menu li {
+    border-color: #2a2a3c;
+}
+
+.notification-menu li:hover, .profile-menu li:hover {
+    background: #f9f9f9;
+}
+
+body.dark .notification-menu li:hover, body.dark .profile-menu li:hover {
+    background: #2a2a3c;
+}
+
+.notification-menu li:last-child, .profile-menu li:last-child {
+    border-bottom: none;
+}
+
+.profile img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* 打印样式 */
+@media print {
+    body {
+        background-color: white !important;
+    }
+    
+    .report-container {
+        box-shadow: none !important;
+        max-width: 100%;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .report-header {
+        background: none !important;
+        padding: 1rem 0 !important;
+    }
+    
+    .report-title {
+        color: #2c3e50 !important;
+        text-shadow: none !important;
+    }
+    
+    .card {
+        border: none !important;
+        box-shadow: none !important;
+    }
+    
+    .d-flex.justify-content-center.gap-3.mt-4 {
+        display: none !important;
+    }
+    
+    .table {
+        width: 100% !important;
+        box-shadow: none !important;
+    }
+    
+    .table-primary {
+        background: none !important;
+        color: #333 !important;
+    }
+    
+    .table th {
+        color: #333 !important;
+        background-color: #f8f9fa !important;
+    }
+    
+    .report-image {
+        max-width: 100% !important;
+        height: auto !important;
+        box-shadow: none !important;
+    }
+    
+    .btn, .airline-selector i, #sidebar, #content nav {
+        display: none !important;
+    }
+    
+    #content {
+        width: 100% !important;
+        left: 0 !important;
+    }
+}

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飞机检修报告</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="modern_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body class="bg-light">
+    <!-- 侧边栏 -->
+    <section id="sidebar">
+        <a href="#" class="brand">
+            <i class='bx bxs-plane-alt'></i>
+            <span class="text">飞检系统</span>
+        </a>
+        <ul class="side-menu top">
+            <li class="active">
+                <a href="#">
+                    <i class='bx bxs-dashboard'></i>
+                    <span class="text">检修报告</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-data'></i>
+                    <span class="text">数据分析</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-doughnut-chart'></i>
+                    <span class="text">统计图表</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-message-dots'></i>
+                    <span class="text">消息通知</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-group'></i>
+                    <span class="text">团队管理</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="side-menu bottom">
+            <li>
+                <a href="#">
+                    <i class='bx bxs-cog'></i>
+                    <span class="text">设置</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="logout">
+                    <i class='bx bx-power-off'></i>
+                    <span class="text">退出</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+    
+    <!-- 内容区域 -->
+    <section id="content">
+        <!-- 导航栏 -->
+        <nav>
+            <i class='bx bx-menu'></i>
+            <a href="#" class="nav-link">检修报告</a>
+            <form action="#">
+                <div class="form-input">
+                    <input type="search" placeholder="搜索...">
+                    <button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
+                </div>
+            </form>
+            <div class="nav-right">
+                <input type="checkbox" class="checkbox" id="switch-mode" hidden />
+                <label class="swith-lm" for="switch-mode">
+                    <i class="bx bxs-moon"></i>
+                    <i class="bx bx-sun"></i>
+                    <div class="ball"></div>
+                </label>
+
+                <!-- 通知图标 -->
+                <a href="#" class="notification" id="notificationIcon">
+                    <i class='bx bxs-bell'></i>
+                    <span class="num">3</span>
+                </a>
+                <div class="notification-menu" id="notificationMenu">
+                    <ul>
+                        <li>新的检修任务已分配</li>
+                        <li>报告已被审核通过</li>
+                        <li>系统更新通知</li>
+                    </ul>
+                </div>
+
+                <!-- 个人资料图标 -->
+                <a href="#" class="profile" id="profileIcon">
+                    <img src="https://via.placeholder.com/36" alt="Profile">
+                </a>
+                <div class="profile-menu" id="profileMenu">
+                    <ul>
+                        <li><a href="#"><i class='bx bx-user me-2'></i>个人资料</a></li>
+                        <li><a href="#"><i class='bx bx-cog me-2'></i>账户设置</a></li>
+                        <li><a href="#"><i class='bx bx-log-out me-2'></i>退出登录</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-xl-9">
+                <!-- 报告容器 -->
+                <div class="report-container my-4 p-4 bg-white shadow-lg rounded">
+                    <!-- 报告标题 -->
+                    <div class="report-header d-flex align-items-center justify-content-between mb-4 pb-3 border-bottom">
+                        <h1 class="report-title fw-bold mb-0">飞机检修报告</h1>
+                        <div class="d-none d-md-block">
+                            <div class="badge bg-primary p-2 fs-6">AI辅助检测</div>
+                        </div>
+                    </div>
+                    
+                    <!-- 基本信息卡片 -->
+                    <div class="card mb-4 shadow-sm border-0">
+                        <div class="card-header bg-white py-3 border-0">
+                            <h5 class="mb-0 text-primary"><i class="fas fa-info-circle me-2"></i>基本信息</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row mb-3">
+                                <div class="col-md-3 text-center mb-3 mb-md-0">
+                                    <label for="airlineSelect" class="form-label fw-bold">航司选择：</label>
+                                    <div class="airline-selector p-3 d-flex flex-column align-items-center justify-content-center border border-1 rounded h-100">
+                                        <div class="mb-2">
+                                            <i class="fas fa-plane-departure fs-1 text-primary mb-2"></i>
+                                        </div>
+                                        <select id="airlineSelect" class="form-select airline-select">
+                                            <option value="" selected disabled>请选择航空公司</option>
+                                            <option value="csair">中国南方航空</option>
+                                            <option value="ceair">中国东方航空</option>
+                                            <option value="airchina">中国国际航空</option>
+                                            <option value="xiamenair">厦门航空</option>
+                                            <option value="hainanair">海南航空</option>
+                                            <option value="juneyaoair">吉祥航空</option>
+                                            <option value="sichuanair">四川航空</option>
+                                            <option value="shenzhenair">深圳航空</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="aircraftNumber" class="form-label fw-bold">飞机号：</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="fas fa-plane"></i></span>
+                                                <input type="text" id="aircraftNumber" class="form-control editable" placeholder="请输入飞机号">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="flightNumber" class="form-label fw-bold">航班号：</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="fas fa-ticket-alt"></i></span>
+                                                <input type="text" id="flightNumber" class="form-control editable" placeholder="请输入航班号">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="maintenanceStation" class="form-label fw-bold">机务基地：</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                                                <input type="text" id="maintenanceStation" class="form-control editable" placeholder="请输入机务基地代码">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="droneModel" class="form-label fw-bold">无人机型号：</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="fas fa-helicopter"></i></span>
+                                                <input type="text" id="droneModel" class="form-control editable" placeholder="请输入无人机型号">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="pilotName" class="form-label fw-bold">飞手姓名：</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                                <input type="text" id="pilotName" class="form-control editable" placeholder="请输入飞手姓名">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="completionDate" class="form-label fw-bold">完成日期/北京时间：</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                                                <input type="text" id="completionDate" class="form-control editable" placeholder="格式：2025年03月18日">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="releaser" class="form-label fw-bold">放行者签署：</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="fas fa-signature"></i></span>
+                                                <input type="text" id="releaser" class="form-control editable" placeholder="请输入放行者姓名">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-4">
+                                    <label for="startTime" class="form-label fw-bold">检查开始时间：</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fas fa-clock"></i></span>
+                                        <input type="text" id="startTime" class="form-control editable" placeholder="例如：03:00 PM">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="endTime" class="form-label fw-bold">检查结束时间：</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fas fa-clock"></i></span>
+                                        <input type="text" id="endTime" class="form-control editable" placeholder="例如：03:10 PM">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label fw-bold">耗时：</label>
+                                    <div id="duration" class="form-control bg-light text-center"><i class="fas fa-stopwatch me-2"></i>自动计算</div>
+                                </div>
+                            </div>
+                            
+                            <div class="row mb-0">
+                                <div class="col-12">
+                                    <label for="videoPath" class="form-label fw-bold">检查视频文件路径：</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fas fa-video"></i></span>
+                                        <input type="text" id="videoPath" class="form-control editable" placeholder="例如：C:\Users\FileStorage\File\视频.mp4">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 检查详情卡片 -->
+                    <div class="card mb-4 shadow-sm border-0">
+                        <div class="card-header bg-white py-3 border-0">
+                            <h5 class="mb-0 text-primary"><i class="fas fa-clipboard-check me-2"></i>检查详情</h5>
+                        </div>
+                        <div class="card-body">
+                            <!-- 标签页导航 -->
+                            <ul class="nav nav-tabs mb-4" id="inspectionTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="summary-tab" data-bs-toggle="tab" data-bs-target="#summary" type="button" role="tab" aria-controls="summary" aria-selected="true">
+                                        <i class="fas fa-chart-pie me-2"></i>基本统计
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="details-tab" data-bs-toggle="tab" data-bs-target="#details" type="button" role="tab" aria-controls="details" aria-selected="false">
+                                        <i class="fas fa-images me-2"></i>详细图片
+                                    </button>
+                                </li>
+                            </ul>
+                            
+                            <!-- 标签页内容 -->
+                            <div class="tab-content" id="inspectionTabsContent">
+                                <!-- 基本统计标签页 -->
+                                <div class="tab-pane fade show active" id="summary" role="tabpanel" aria-labelledby="summary-tab">
+                                    <div class="row g-3 mb-4">
+                                        <div class="col-md-4">
+                                            <div class="card h-100 border-0 bg-light">
+                                                <div class="card-body text-center">
+                                                    <i class="fas fa-exclamation-triangle text-warning fs-2 mb-2"></i>
+                                                    <h6 class="fw-bold">异常点数</h6>
+                                                    <div class="input-group">
+                                                        <input type="number" id="faultCount" class="form-control editable text-center" placeholder="数量">
+                                                        <span class="input-group-text">个</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card h-100 border-0 bg-light">
+                                                <div class="card-body text-center">
+                                                    <i class="fas fa-tasks text-primary fs-2 mb-2"></i>
+                                                    <h6 class="fw-bold">完成率</h6>
+                                                    <div class="input-group">
+                                                        <input type="text" id="inspectionProgress" class="form-control editable text-center" placeholder="百分比">
+                                                        <span class="input-group-text">%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card h-100 border-0 bg-light">
+                                                <div class="card-body text-center">
+                                                    <i class="fas fa-comment-alt text-success fs-2 mb-2"></i>
+                                                    <h6 class="fw-bold">备注</h6>
+                                                    <input type="text" id="remarks" class="form-control editable" placeholder="简要说明">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- 详细图片标签页 -->
+                                <div class="tab-pane fade" id="details" role="tabpanel" aria-labelledby="details-tab">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-bordered align-middle mb-0">
+                                            <thead>
+                                                <tr class="bg-light">
+                                                    <th width="8%" class="text-center">序号</th>
+                                                    <th width="22%" class="text-center">位置</th>
+                                                    <th class="text-center">图片</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center fw-bold bg-light">1</td>
+                                                    <td>
+                                                        <input type="text" class="form-control editable location-input" placeholder="请输入位置">
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <div class="position-relative image-container">
+                                                            <img src="images/DJI_20250303130044_0001_V_4783.jpg" class="report-image img-fluid rounded" alt="检查图片1">
+                                                            <div class="image-overlay">
+                                                                <i class="fas fa-search-plus"></i>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center fw-bold bg-light">2</td>
+                                                    <td>
+                                                        <input type="text" class="form-control editable location-input" placeholder="请输入位置">
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <div class="position-relative image-container">
+                                                            <img src="images/DJI_20250303130044_0001_V_5963.jpg" class="report-image img-fluid rounded" alt="检查图片2">
+                                                            <div class="image-overlay">
+                                                                <i class="fas fa-search-plus"></i>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center fw-bold bg-light">3</td>
+                                                    <td>
+                                                        <input type="text" class="form-control editable location-input" placeholder="请输入位置">
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <div class="position-relative image-container">
+                                                            <img src="images/DJI_20250303130044_0001_V_4783.jpg" class="report-image img-fluid rounded" alt="检查图片3">
+                                                            <div class="image-overlay">
+                                                                <i class="fas fa-search-plus"></i>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center fw-bold bg-light">4</td>
+                                                    <td>
+                                                        <input type="text" class="form-control editable location-input" placeholder="请输入位置">
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <div class="position-relative image-container">
+                                                            <img src="images/DJI_20250303130044_0001_V_5963.jpg" class="report-image img-fluid rounded" alt="检查图片4">
+                                                            <div class="image-overlay">
+                                                                <i class="fas fa-search-plus"></i>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 操作按钮 -->
+                    <div class="d-flex justify-content-center gap-3 mt-4">
+                        <button id="printReport" class="btn btn-primary px-4 py-2">
+                            <i class="fas fa-print me-2"></i>打印报告
+                        </button>
+                        <button onclick="exportToPDF()" class="btn btn-success px-4 py-2">
+                            <i class="fas fa-file-pdf me-2"></i>导出PDF
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 图片预览模态框 -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title">图片预览</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center p-0">
+                    <img id="modalImage" class="img-fluid" src="" alt="预览图片">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="modern_script.js"></script>
+</body>
+</html>
