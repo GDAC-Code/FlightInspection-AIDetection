@@ -1,2 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<annotation><folder>images</folder><filename>8_1.png</filename><path>images/8_1.png</path><source><database>Unknown</database></source><size><width>4096</width><height>3073</height><depth>3</depth></size><object><name>Dents or Deformation</name><pose>Unspecified</pose><truncated>0</truncated><difficult>0</difficult><bndbox><xmin>1603</xmin><ymin>1361</ymin><xmax>2604</xmax><ymax>2202</ymax></bndbox></object></annotation>

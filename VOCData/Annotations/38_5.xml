@@ -1,2 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<annotation><folder>images</folder><filename>38_5.png</filename><path>images/38_5.png</path><source><database>Unknown</database></source><size><width>7197</width><height>6465</height><depth>3</depth></size><object><name>Paint Peeling</name><pose>Unspecified</pose><truncated>0</truncated><difficult>0</difficult><bndbox><xmin>4553</xmin><ymin>5014</ymin><xmax>4702</xmax><ymax>5171</ymax></bndbox></object></annotation>

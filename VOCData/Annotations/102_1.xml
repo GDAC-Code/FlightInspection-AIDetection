@@ -1,2 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<annotation><folder>images</folder><filename>102_1.png</filename><path>images/102_1.png</path><source><database>Unknown</database></source><size><width>6001</width><height>4001</height><depth>3</depth></size><object><name>Corrosion</name><pose>Unspecified</pose><truncated>0</truncated><difficult>0</difficult><bndbox><xmin>4858</xmin><ymin>77</ymin><xmax>5492</xmax><ymax>600</ymax></bndbox></object></annotation>
