@@ -1,0 +1,29 @@
+<annotation>
+	<folder></folder>
+	<filename>VID_20250323_180447-1-_mp4-0021_jpg.rf.afdd98f199c2c71c9d3324278c77271f.jpg</filename>
+	<path>VID_20250323_180447-1-_mp4-0021_jpg.rf.afdd98f199c2c71c9d3324278c77271f.jpg</path>
+	<source>
+		<database>roboflow.com</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Scratches</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<bndbox>
+			<xmin>135</xmin>
+			<xmax>377</xmax>
+			<ymin>157</ymin>
+			<ymax>260</ymax>
+		</bndbox>
+	</object>
+	<metadata>
+	</metadata>
+</annotation>
