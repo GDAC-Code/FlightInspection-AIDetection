@@ -1,5 +1,5 @@
-train: E:\FlightInspection-AIDetection\VOCData\ImageSets\train.txt
-val: E:\FlightInspection-AIDetection\VOCData\ImageSets\val.txt
+train: D:\Projects\FlightInspection-AIDetection\VOCData\ImageSets\train.txt
+val: D:\Projects\FlightInspection-AIDetection\VOCData\ImageSets\val.txt
 
 # number of classes
 nc: 5
