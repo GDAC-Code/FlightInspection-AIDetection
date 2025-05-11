@@ -1,9 +1,0 @@
-train: D:\Projects\FlightInspection-AIDetection\VOCData\ImageSets\train.txt
-val: D:\Projects\FlightInspection-AIDetection\VOCData\ImageSets\val.txt
-
-# number of classes
-nc: 5
-
-# class names
-names: ['Paint Peeling', 'Dents or Deformation', 'Cracks', 'Corrosion', 'Scratches']
-
