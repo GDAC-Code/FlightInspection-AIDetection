@@ -8,6 +8,6 @@ torch.backends.cudnn.deterministic = True
 
 if __name__ == "__main__":
     # build from YAML and transfer weights
-    model = YOLO('yolo12x.yaml').load('./weights/yolo12x.pt')
+    model = YOLO('yolo11n.yaml').load('./weights/yolo11n.pt')
     # Train the model
     model.train(data='./VOCData/mydata.yaml', epochs=300, imgsz=640)
